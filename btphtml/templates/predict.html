@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+            <div class='cont'>
+
+
+            {% if data[0] == '10' %}
+            <h1>I think it is a 10 rupees note</h1>
+
+            {% elif data[0] == '100' %}
+            <h1>I think it is a 100 rupees note</h1>
+
+            {% elif data[0] == '20' %}
+            <h1>I think it is a 20 rupees note</h1>
+
+            {% elif data[0] == '200' %}
+            <h1>I think it is a 200 rupees note</h1>
+
+            {% elif data[0] == '2000' %}
+            <h1>I think it is a 2000 rupees note</h1>
+
+            {% elif data[0] == '50' %}
+            <h1>I think it is a 50 rupees note</h1>
+
+            {% elif data[0] == '500' %}
+            <h1>I think it is a 500 rupees note</h1>
+
+            {%endif%}
+
+        </div>
+            <h3>Prediction<br> Currency: <span>{{data[0]}}</span> <br>Confidence: <span>{{data[1]}}</span><br> </h3>
+
+            <img src="{{url_for('load_img')}}" alt='img'>
+            <a href="/" class='btn'>go back</a>
+
+        </center>
+
+    </body>
+</html>
